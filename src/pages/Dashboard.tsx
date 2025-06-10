@@ -86,7 +86,7 @@ const Dashboard = () => {
 
   const upcomingMissions = [
     {
-      title: "บันทึกรายจ่าย",
+      title: "บันทึกร��ยจ่าย",
       description: "บันทึกรายจ่ายวันนี้",
       deadline: "วันนี้",
       points: 10,
@@ -120,7 +120,13 @@ const Dashboard = () => {
         {/* GHB Credit Score Card with Alternative Data */}
         <Card className="border-0 shadow-lg bg-gradient-primary text-white overflow-hidden relative">
           <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
-          <CardHeader className="pb-4">
+          <CardHeader
+            className="pb-4"
+            style={{
+              backgroundColor:
+                window.innerWidth <= 640 ? "rgba(255, 118, 3, 1)" : undefined,
+            }}
+          >
             <div className="flex items-center justify-between">
               <div>
                 <CardTitle className="text-white thai-text text-lg">
@@ -138,7 +144,11 @@ const Dashboard = () => {
               </div>
             </div>
           </CardHeader>
-          <CardContent>
+          <CardContent
+            style={{
+              backgroundColor: window.innerWidth <= 640 ? "#ff7603" : undefined,
+            }}
+          >
             <div className="flex items-center justify-between mb-4">
               <div>
                 <div className="text-4xl font-bold text-white mb-1">
@@ -235,7 +245,7 @@ const Dashboard = () => {
                 <div className="font-semibold text-yellow-700 thai-text">
                   กำลังทำ
                 </div>
-                <div className="text-yellow-600 thai-text">วางแผนการเง��น</div>
+                <div className="text-yellow-600 thai-text">วางแผนการเงิน</div>
               </div>
             </div>
             <div className="mt-4 p-3 bg-ghb-light/30 rounded-lg">
