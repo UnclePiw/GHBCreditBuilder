@@ -32,6 +32,7 @@ import {
   Video,
   FileText,
   HelpCircle,
+  Trophy,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -121,7 +122,7 @@ const Education = () => {
       {
         id: "5",
         title: "เตรียมความพร้อมก่อนซื้อบ้าน",
-        description: "สิ่ง���ี่ต้องเตรียมก่อนตัดสินใจซื้อบ้าน",
+        description: "สิ่งที่ต้องเตรียมก่อนตัดสินใจซื้อบ้าน",
         duration: 18,
         type: "article",
         difficulty: "intermediate",
@@ -389,7 +390,7 @@ const Education = () => {
                         <li>ชำระหนี้ตรงเวลาทุกครั้ง</li>
                         <li>ไม่ใช้เครดิตเกินกำลัง</li>
                         <li>มีบัญชีธนาคารและใช้งานสม่ำเสมอ</li>
-                        <li>จ่าย��่าสาธารณูปโภคตรงเวลา</li>
+                        <li>จ่ายค่าสาธารณูปโภคตรงเวลา</li>
                       </ol>
                     </div>
                   </div>
@@ -545,7 +546,7 @@ const Education = () => {
           <CardHeader>
             <CardTitle className="text-ghb-dark thai-text flex items-center">
               <Trophy className="w-5 h-5 mr-2 text-purple-600" />
-              รางวั���การเรียนรู้
+              รางวัลการเรียนรู้
             </CardTitle>
           </CardHeader>
           <CardContent>
