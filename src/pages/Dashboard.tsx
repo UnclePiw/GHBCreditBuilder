@@ -120,13 +120,7 @@ const Dashboard = () => {
         {/* GHB Credit Score Card with Alternative Data */}
         <Card className="border-0 shadow-lg bg-gradient-primary text-white overflow-hidden relative">
           <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
-          <CardHeader
-            className="pb-4"
-            style={{
-              backgroundColor:
-                window.innerWidth <= 640 ? "rgba(255, 118, 3, 1)" : undefined,
-            }}
-          >
+          <CardHeader className="pb-4 sm:bg-transparent max-sm:!bg-[rgba(255,118,3,1)]">
             <div className="flex items-center justify-between">
               <div>
                 <CardTitle className="text-white thai-text text-lg">
@@ -144,11 +138,7 @@ const Dashboard = () => {
               </div>
             </div>
           </CardHeader>
-          <CardContent
-            style={{
-              backgroundColor: window.innerWidth <= 640 ? "#ff7603" : undefined,
-            }}
-          >
+          <CardContent className="sm:bg-transparent max-sm:!bg-[#ff7603]">
             <div className="flex items-center justify-between mb-4">
               <div>
                 <div className="text-4xl font-bold text-white mb-1">
