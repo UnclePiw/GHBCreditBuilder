@@ -31,7 +31,7 @@ import {
   Lightbulb,
   Video,
   FileText,
-  Quiz as QuizIcon,
+  HelpCircle,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -120,7 +120,7 @@ const Education = () => {
     housing: [
       {
         id: "5",
-        title: "เตรียมความพร้อมก่อนซื้อบ้าน",
+        title: "เตรียมความพร้อมก่อนซื้อ���้าน",
         description: "สิ่งที่ต้องเตรียมก่อนตัดสินใจซื้อบ้าน",
         duration: 18,
         type: "article",
@@ -156,7 +156,7 @@ const Education = () => {
       {
         id: "8",
         title: "การลงทุนเบื้องต้น",
-        description: "หลักการลงทุนและการกระจายความเสี่ยง",
+        description: "หลักการลงทุนและการกระจา��ความเสี่ยง",
         duration: 22,
         type: "video",
         difficulty: "beginner",
@@ -167,7 +167,7 @@ const Education = () => {
       {
         id: "9",
         title: "กองทุนรวมสำหรับมือใหม่",
-        description: "เลือกกองทุนรวมที่เหมาะก���บตัวคุณ",
+        description: "เลือกกองทุนรวมที่เหมาะกับตัวคุณ",
         duration: 16,
         type: "interactive",
         difficulty: "intermediate",
@@ -366,7 +366,7 @@ const Education = () => {
                       เครดิต หรือ Credit
                       คือความน่าเชื่อถือทางการเงินของบุคคลหรือนิติบุคคล
                       ในการชำระหนี้ตามกำหนดเวลา
-                      โดยสถาบันการเงินจะประเมินจากประวัติการใช้เงิน
+                      โดยสถาบันการเงินจะประเมินจากประวัติการใช���เงิน
                       และการชำระหนี้ในอดีต
                     </p>
 
@@ -426,7 +426,7 @@ const Education = () => {
             ศูนย์การเรียนรู้
           </h1>
           <p className="text-ghb-gray thai-text">
-            เพิ่มความรู้ทางการเงินเ��ื่อสร้างอนาคตที่มั่นคง
+            เพิ่มความรู้ทางการเงินเพื่อสร้างอนาคตที่มั่นคง
           </p>
         </div>
 
@@ -452,7 +452,7 @@ const Education = () => {
                   </div>
                   <div className="flex items-center">
                     <Target className="w-4 h-4 mr-1" />
-                    <span>{userProgress.currentStreak} วันต่อเน��่อง</span>
+                    <span>{userProgress.currentStreak} วันต่อเนื่อง</span>
                   </div>
                 </div>
               </div>
