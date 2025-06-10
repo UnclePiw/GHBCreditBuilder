@@ -1,15 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { ProgressRing } from "@/components/ui/progress-ring";
 import { Navbar } from "@/components/Navbar";
-import { 
-  TrendingUp, 
-  Target, 
-  Award, 
+import {
+  TrendingUp,
+  Target,
+  Award,
   Calendar,
   PiggyBank,
   CreditCard,
@@ -18,7 +24,7 @@ import {
   Trophy,
   Flame,
   CheckCircle,
-  Plus
+  Plus,
 } from "lucide-react";
 
 const Dashboard = () => {
@@ -26,7 +32,7 @@ const Dashboard = () => {
   const creditScore = 650;
   const journeyProgress = 68;
   const currentLevel = 3;
-  const totalPoints = 1,250;
+  const totalPoints = 1250;
   const currentStreak = 7;
   const monthlySavings = 2500;
   const savingsGoal = 5000;
@@ -37,22 +43,22 @@ const Dashboard = () => {
       description: "มี 3 ภารกิจรอคุณอยู่",
       icon: Target,
       color: "bg-ghb-primary",
-      link: "/missions"
+      link: "/missions",
     },
     {
       title: "จำลองสินเชื่อ",
       description: "ดูความเป็นไปได้ในการอนุมัติ",
       icon: CreditCard,
       color: "bg-ghb-accent",
-      link: "/loan-simulator"
+      link: "/loan-simulator",
     },
     {
       title: "เรียนรู้",
       description: "บทเรียนใหม่เพิ่มแล้ว",
       icon: Award,
       color: "bg-ghb-success",
-      link: "/education"
-    }
+      link: "/education",
+    },
   ];
 
   const recentAchievements = [
@@ -61,15 +67,15 @@ const Dashboard = () => {
       description: "ออมเงินครบ 30 วัน",
       date: "วันนี้",
       points: 100,
-      icon: PiggyBank
+      icon: PiggyBank,
     },
     {
       title: "ผู้เรียนรู้",
       description: "อ่านบทเรียนครบ 5 บท",
       date: "เมื่อวาน",
       points: 50,
-      icon: Award
-    }
+      icon: Award,
+    },
   ];
 
   const upcomingMissions = [
@@ -78,21 +84,21 @@ const Dashboard = () => {
       description: "บันทึกรายจ่ายวันนี้",
       deadline: "วันนี้",
       points: 10,
-      progress: 80
+      progress: 80,
     },
     {
       title: "เรียนรู้การลงทุน",
       description: "อ่านบทเรียนการลงทุนเบื้องต้น",
       deadline: "พรุ่งนี้",
       points: 25,
-      progress: 0
-    }
+      progress: 0,
+    },
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-ghb-light/30 via-white to-ghb-accent/5 pb-24">
       <Navbar notifications={3} />
-      
+
       {/* Main Content */}
       <div className="pt-20 px-4 space-y-6">
         {/* Welcome Section */}
@@ -127,12 +133,15 @@ const Dashboard = () => {
                 <div className="text-4xl font-bold text-white mb-2">
                   {creditScore}
                 </div>
-                <Badge variant="secondary" className="bg-white/20 text-white border-0">
+                <Badge
+                  variant="secondary"
+                  className="bg-white/20 text-white border-0"
+                >
                   เครดิตดี
                 </Badge>
               </div>
-              <ProgressRing 
-                progress={((creditScore - 300) / 550) * 100} 
+              <ProgressRing
+                progress={((creditScore - 300) / 550) * 100}
                 size={80}
                 strokeWidth={6}
                 color="#FFFFFF"
@@ -164,7 +173,7 @@ const Dashboard = () => {
           <CardContent>
             <Progress value={journeyProgress} className="h-3 mb-4" />
             <p className="text-sm text-ghb-gray thai-text">
-              เป้าหมายถัดไป: เพิ่มคะแนนเครดิตอีก 50 คะแนน
+              เป้าหมายถัดไป: เพิ่มคะแนนเครดิต��ีก 50 คะแนน
             </p>
           </CardContent>
         </Card>
@@ -228,7 +237,10 @@ const Dashboard = () => {
                 {Math.round((monthlySavings / savingsGoal) * 100)}%
               </Badge>
             </div>
-            <Progress value={(monthlySavings / savingsGoal) * 100} className="h-2" />
+            <Progress
+              value={(monthlySavings / savingsGoal) * 100}
+              className="h-2"
+            />
           </CardContent>
         </Card>
 
@@ -244,7 +256,9 @@ const Dashboard = () => {
                 <Link key={index} to={action.link}>
                   <Card className="border-0 shadow-md hover:shadow-lg transition-all duration-200 active:scale-98">
                     <CardContent className="flex items-center p-4">
-                      <div className={`w-12 h-12 ${action.color} rounded-xl flex items-center justify-center mr-4`}>
+                      <div
+                        className={`w-12 h-12 ${action.color} rounded-xl flex items-center justify-center mr-4`}
+                      >
                         <Icon className="w-6 h-6 text-white" />
                       </div>
                       <div className="flex-1">
@@ -332,7 +346,10 @@ const Dashboard = () => {
                     </Badge>
                   </div>
                   <div className="flex items-center justify-between">
-                    <Progress value={mission.progress} className="flex-1 h-2 mr-3" />
+                    <Progress
+                      value={mission.progress}
+                      className="flex-1 h-2 mr-3"
+                    />
                     <span className="text-xs text-ghb-gray thai-text">
                       {mission.deadline}
                     </span>
