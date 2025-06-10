@@ -235,7 +235,7 @@ const Dashboard = () => {
                 <div className="font-semibold text-yellow-700 thai-text">
                   กำลังทำ
                 </div>
-                <div className="text-yellow-600 thai-text">วางแผนการเงิน</div>
+                <div className="text-yellow-600 thai-text">วางแผนการเง��น</div>
               </div>
             </div>
             <div className="mt-4 p-3 bg-ghb-light/30 rounded-lg">
@@ -352,8 +352,11 @@ const Dashboard = () => {
                   <span className="font-semibold thai-text">วางดาวน์บ้าน</span>
                 </div>
               </div>
-              <Button className="w-full mt-3 bg-green-600 hover:bg-green-700 text-white thai-text">
-                ดูรายละเอียด
+              <Button
+                className="w-full mt-3 bg-green-600 hover:bg-green-700 text-white thai-text"
+                onClick={() => (window.location.href = "/document-upload")}
+              >
+                เตรียมเอกสาร
               </Button>
             </CardContent>
           </Card>

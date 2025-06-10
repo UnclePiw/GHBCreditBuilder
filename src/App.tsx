@@ -10,6 +10,7 @@ import LoanSimulator from "./pages/LoanSimulator";
 import Education from "./pages/Education";
 import Chat from "./pages/Chat";
 import CreditSandbox from "./pages/CreditSandbox";
+import DocumentUpload from "./pages/DocumentUpload";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/education" element={<Education />} />
           <Route path="/chat" element={<Chat />} />
           <Route path="/credit-sandbox" element={<CreditSandbox />} />
+          <Route path="/document-upload" element={<DocumentUpload />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

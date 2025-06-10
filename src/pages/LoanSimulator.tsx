@@ -381,7 +381,7 @@ const LoanSimulator = () => {
                   ข้อมูลทางเลือกเพื่อเพิ่มคะแนน
                 </CardTitle>
                 <CardDescription className="thai-text">
-                  ข้อมูลเหล่านี้จะช่วยเพิ่มโอกาสการอนุมัติสิ���เชื่อของคุณ
+                  ข้อมูลเหล่านี้จะช่วยเพิ่มโอกาสการอนุมัติสินเชื่อของคุณ
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -569,7 +569,7 @@ const LoanSimulator = () => {
                 <Card className="border-0 shadow-md border-l-4 border-l-ghb-primary">
                   <CardHeader>
                     <CardTitle className="text-ghb-dark thai-text">
-                      คำแนะนำเพื่อเพิ่มโอกาส
+                      คำแนะนำเพื่อ��พิ่มโอกาส
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
@@ -578,7 +578,7 @@ const LoanSimulator = () => {
                         <CheckCircle2 className="w-5 h-5 text-green-500 mt-0.5" />
                         <div>
                           <p className="font-medium text-ghb-dark thai-text">
-                            สร้างประวัต��การออมเงิน
+                            สร้างประวัติการออมเงิน
                           </p>
                           <p className="text-sm text-ghb-gray thai-text">
                             ออมเงินสม่ำเสมออย่างน้อย 3 เดือน
@@ -592,7 +592,7 @@ const LoanSimulator = () => {
                             จ่ายบิลตรงเวลา
                           </p>
                           <p className="text-sm text-ghb-gray thai-text">
-                            ชำระค่าสาธารณูปโภคและค่าโทรศัพท์ทุกเดือน
+                            ชำระค่��สาธารณูปโภคและค่าโทรศัพท์ทุกเดือน
                           </p>
                         </div>
                       </div>
@@ -619,8 +619,11 @@ const LoanSimulator = () => {
                   >
                     คำนวณใหม่
                   </Button>
-                  <Button className="flex-1 h-12 bg-gradient-primary text-white thai-text">
-                    ยื่นขอสินเชื่อ
+                  <Button
+                    className="flex-1 h-12 bg-gradient-primary text-white thai-text"
+                    onClick={() => (window.location.href = "/document-upload")}
+                  >
+                    เตรียมเอกสาร
                   </Button>
                 </div>
               </>
