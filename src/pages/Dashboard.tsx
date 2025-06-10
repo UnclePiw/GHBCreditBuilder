@@ -120,7 +120,7 @@ const Dashboard = () => {
         {/* GHB Credit Score Card with Alternative Data */}
         <Card className="border-0 shadow-lg bg-gradient-primary text-white overflow-hidden relative">
           <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
-          <CardHeader className="pb-4 sm:bg-transparent max-sm:!bg-[rgba(245,166,35,1)]">
+          <CardHeader className="pb-4 !bg-[rgba(245,166,35,1)]">
             <div className="flex items-center justify-between">
               <div>
                 <CardTitle className="text-white thai-text text-lg">
@@ -138,7 +138,7 @@ const Dashboard = () => {
               </div>
             </div>
           </CardHeader>
-          <CardContent className="sm:bg-transparent max-sm:!bg-[rgba(245,166,35,1)]">
+          <CardContent className="!bg-[rgba(245,166,35,1)]">
             <div className="flex items-center justify-between mb-4">
               <div>
                 <div className="text-4xl font-bold text-white mb-1">
@@ -203,7 +203,7 @@ const Dashboard = () => {
                   บันไดเครดิต GHB
                 </CardTitle>
                 <CardDescription className="thai-text">
-                  สร้างวินัยการเงินเดื��นที่ {monthsInProgram}/12 เดือน
+                  สร้างวินัยการเงินเดือนที่ {monthsInProgram}/12 เดือน
                 </CardDescription>
               </div>
               <div className="text-center">
@@ -344,7 +344,7 @@ const Dashboard = () => {
                     อัตราดอกเบี้ย:
                   </span>
                   <span className="font-semibold text-green-600">
-                    6.5% ต่อปี
+                    6.5% ต���อปี
                   </span>
                 </div>
                 <div className="flex justify-between">
