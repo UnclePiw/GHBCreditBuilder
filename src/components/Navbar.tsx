@@ -9,6 +9,7 @@ import {
   MessageCircle,
   User,
   Bell,
+  Shield,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -27,10 +28,10 @@ const navItems = [
     labelEn: "Missions",
   },
   {
-    path: "/loan-simulator",
-    icon: Calculator,
-    label: "จำลองสินเชื่อ",
-    labelEn: "Loan Sim",
+    path: "/credit-sandbox",
+    icon: Shield,
+    label: "เครดิตทดลอง",
+    labelEn: "Credit",
   },
   {
     path: "/education",

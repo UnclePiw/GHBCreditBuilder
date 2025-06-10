@@ -25,17 +25,23 @@ import {
   Flame,
   CheckCircle,
   Plus,
+  Shield,
 } from "lucide-react";
 
 const Dashboard = () => {
   // Mock data - in real app this would come from API
   const creditScore = 650;
+  const ghbCreditScore = 725; // New GHB Credit Score using alternative data
   const journeyProgress = 68;
   const currentLevel = 3;
   const totalPoints = 1250;
+  const ghbPoints = 850; // GHB Points for rewards
   const currentStreak = 7;
   const monthlySavings = 2500;
   const savingsGoal = 5000;
+  const creditLadderProgress = 75; // Credit Ladder progress (3-12 months)
+  const monthsInProgram = 8;
+  const nextMicroCredit = 15000; // Available micro-credit amount
 
   const quickActions = [
     {
@@ -46,18 +52,18 @@ const Dashboard = () => {
       link: "/missions",
     },
     {
+      title: "เครดิตทดลอง",
+      description: "จัดการข้อมูลทางเลือกของคุณ",
+      icon: Shield,
+      color: "bg-ghb-accent",
+      link: "/credit-sandbox",
+    },
+    {
       title: "จำลองสินเชื่อ",
       description: "ดูความเป็นไปได้ในการอนุมัติ",
       icon: CreditCard,
-      color: "bg-ghb-accent",
+      color: "bg-purple-500",
       link: "/loan-simulator",
-    },
-    {
-      title: "เรียนรู้",
-      description: "บทเรียนใหม่เพิ่มแล้ว",
-      icon: Award,
-      color: "bg-ghb-success",
-      link: "/education",
     },
   ];
 
@@ -111,37 +117,45 @@ const Dashboard = () => {
           </p>
         </div>
 
-        {/* Credit Score Card */}
+        {/* GHB Credit Score Card with Alternative Data */}
         <Card className="border-0 shadow-lg bg-gradient-primary text-white overflow-hidden relative">
           <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
           <CardHeader className="pb-4">
             <div className="flex items-center justify-between">
               <div>
                 <CardTitle className="text-white thai-text text-lg">
-                  คะแนนเครดิตของคุณ
+                  GHB Credit Score
                 </CardTitle>
                 <CardDescription className="text-white/80 thai-text">
-                  เพิ่มขึ้น +25 คะแนนในเดือนนี้
+                  คำนวณจากข้อมูลทางเลือก +75 คะแนน
                 </CardDescription>
               </div>
-              <TrendingUp className="w-8 h-8 text-white" />
+              <div className="flex flex-col items-center">
+                <TrendingUp className="w-6 h-6 text-white mb-1" />
+                <Badge className="bg-white/20 text-white border-0 text-xs">
+                  Alternative Data
+                </Badge>
+              </div>
             </div>
           </CardHeader>
           <CardContent>
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between mb-4">
               <div>
-                <div className="text-4xl font-bold text-white mb-2">
-                  {creditScore}
+                <div className="text-4xl font-bold text-white mb-1">
+                  {ghbCreditScore}
+                </div>
+                <div className="text-sm text-white/70 thai-text">
+                  เครดิตแบบดั้งเดิม: {creditScore}
                 </div>
                 <Badge
                   variant="secondary"
-                  className="bg-white/20 text-white border-0"
+                  className="bg-white/20 text-white border-0 mt-2"
                 >
-                  เครดิตดี
+                  เครดิตดีมาก
                 </Badge>
               </div>
               <ProgressRing
-                progress={((creditScore - 300) / 550) * 100}
+                progress={((ghbCreditScore - 300) / 550) * 100}
                 size={80}
                 strokeWidth={6}
                 color="#FFFFFF"
@@ -150,31 +164,88 @@ const Dashboard = () => {
                 <Star className="w-6 h-6 text-white" />
               </ProgressRing>
             </div>
+
+            {/* Alternative Data Sources */}
+            <div className="grid grid-cols-2 gap-2 text-xs">
+              <div className="bg-white/10 rounded-lg p-2">
+                <div className="text-white/80 thai-text">
+                  ชำระค่าสาธารณูปโภค
+                </div>
+                <div className="text-white font-semibold">
+                  ✓ ตรงเวลา 12 เดือน
+                </div>
+              </div>
+              <div className="bg-white/10 rounded-lg p-2">
+                <div className="text-white/80 thai-text">รายได้ E-commerce</div>
+                <div className="text-white font-semibold">✓ สม่ำเสมอ</div>
+              </div>
+              <div className="bg-white/10 rounded-lg p-2">
+                <div className="text-white/80 thai-text">การออมในแอป</div>
+                <div className="text-white font-semibold">
+                  ✓ ทุกวัน {currentStreak} วัน
+                </div>
+              </div>
+              <div className="bg-white/10 rounded-lg p-2">
+                <div className="text-white/80 thai-text">กิจกรรมการเงิน</div>
+                <div className="text-white font-semibold">✓ กลุ่มออม</div>
+              </div>
+            </div>
           </CardContent>
         </Card>
 
-        {/* Journey Progress */}
-        <Card className="border-0 shadow-md">
+        {/* Credit Ladder Progress */}
+        <Card className="border-0 shadow-md border-l-4 border-l-ghb-primary">
           <CardHeader>
             <div className="flex items-center justify-between">
               <div>
-                <CardTitle className="text-ghb-dark thai-text">
-                  เส้นทางการสร้างเครดิต
+                <CardTitle className="text-ghb-dark thai-text flex items-center">
+                  <Target className="w-5 h-5 mr-2 text-ghb-primary" />
+                  บันไดเครดิต GHB
                 </CardTitle>
                 <CardDescription className="thai-text">
-                  ขั้นตอนที่ {currentLevel} จาก 5 ขั้นตอน
+                  สร้างวินัยการเงินเดือนที่ {monthsInProgram}/12 เดือน
                 </CardDescription>
               </div>
-              <Badge className="bg-ghb-primary/10 text-ghb-primary border-0">
-                {journeyProgress}%
-              </Badge>
+              <div className="text-center">
+                <Badge className="bg-ghb-primary/10 text-ghb-primary border-0">
+                  {creditLadderProgress}%
+                </Badge>
+                <div className="text-xs text-ghb-gray mt-1 thai-text">
+                  เกือบจบ!
+                </div>
+              </div>
             </div>
           </CardHeader>
           <CardContent>
-            <Progress value={journeyProgress} className="h-3 mb-4" />
-            <p className="text-sm text-ghb-gray thai-text">
-              เป้าหมายถัดไป: เพิ่มคะแนนเครดิต��ีก 50 คะแนน
-            </p>
+            <Progress value={creditLadderProgress} className="h-3 mb-4" />
+            <div className="grid grid-cols-3 gap-3 text-xs">
+              <div className="text-center p-2 bg-green-50 rounded-lg">
+                <div className="font-semibold text-green-700 thai-text">
+                  เสร็จแล้ว
+                </div>
+                <div className="text-green-600 thai-text">ออมรายวัน</div>
+              </div>
+              <div className="text-center p-2 bg-green-50 rounded-lg">
+                <div className="font-semibold text-green-700 thai-text">
+                  เสร็จแล้ว
+                </div>
+                <div className="text-green-600 thai-text">ชำระตรงเวลา</div>
+              </div>
+              <div className="text-center p-2 bg-yellow-50 rounded-lg">
+                <div className="font-semibold text-yellow-700 thai-text">
+                  กำลังทำ
+                </div>
+                <div className="text-yellow-600 thai-text">วางแผนการเงิน</div>
+              </div>
+            </div>
+            <div className="mt-4 p-3 bg-ghb-light/30 rounded-lg">
+              <p className="text-sm text-ghb-dark thai-text font-medium">
+                🎉 ขั้นต่อไป: ปลดล็อกสินเชื่อจำนวนเล็ก
+              </p>
+              <p className="text-xs text-ghb-gray thai-text mt-1">
+                วงเงินถึง ฿{nextMicroCredit.toLocaleString()} ดอกเบี้ยพิเศษ
+              </p>
+            </div>
           </CardContent>
         </Card>
 
@@ -186,9 +257,12 @@ const Dashboard = () => {
                 <Trophy className="w-6 h-6 text-ghb-warning" />
               </div>
               <div className="text-2xl font-bold text-ghb-dark">
-                {totalPoints.toLocaleString()}
+                {ghbPoints.toLocaleString()}
               </div>
-              <p className="text-sm text-ghb-gray thai-text">คะแนนรวม</p>
+              <p className="text-sm text-ghb-gray thai-text">GHB Points</p>
+              <Badge variant="outline" className="text-xs mt-1">
+                แลกรางวัลได้
+              </Badge>
             </CardContent>
           </Card>
 
@@ -201,6 +275,9 @@ const Dashboard = () => {
                 {currentStreak}
               </div>
               <p className="text-sm text-ghb-gray thai-text">วันต่อเนื่อง</p>
+              <Badge variant="outline" className="text-xs mt-1 thai-text">
+                บันไดเครดิต
+              </Badge>
             </CardContent>
           </Card>
         </div>
@@ -241,6 +318,136 @@ const Dashboard = () => {
               value={(monthlySavings / savingsGoal) * 100}
               className="h-2"
             />
+          </CardContent>
+        </Card>
+
+        {/* Micro-Credit Trial & Partnership Benefits */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {/* Available Micro-Credit */}
+          <Card className="border-0 shadow-md bg-gradient-to-r from-green-50 to-emerald-50">
+            <CardHeader className="pb-3">
+              <CardTitle className="text-ghb-dark thai-text text-lg flex items-center">
+                <CreditCard className="w-5 h-5 mr-2 text-green-600" />
+                สินเชื่อจำนวนเล็ก
+              </CardTitle>
+              <CardDescription className="thai-text">
+                ปลดล็อกจากบันไดเครดิต
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="text-2xl font-bold text-green-700 mb-2">
+                ฿{nextMicroCredit.toLocaleString()}
+              </div>
+              <div className="space-y-2 text-xs">
+                <div className="flex justify-between">
+                  <span className="text-ghb-gray thai-text">
+                    อัตราดอกเบี้ย:
+                  </span>
+                  <span className="font-semibold text-green-600">
+                    6.5% ต่อปี
+                  </span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-ghb-gray thai-text">วัตถุประสงค์:</span>
+                  <span className="font-semibold thai-text">วางดาวน์บ้าน</span>
+                </div>
+              </div>
+              <Button className="w-full mt-3 bg-green-600 hover:bg-green-700 text-white thai-text">
+                ดูรายละเอียด
+              </Button>
+            </CardContent>
+          </Card>
+
+          {/* Partnership Benefits */}
+          <Card className="border-0 shadow-md bg-gradient-to-r from-blue-50 to-indigo-50">
+            <CardHeader className="pb-3">
+              <CardTitle className="text-ghb-dark thai-text text-lg flex items-center">
+                <Star className="w-5 h-5 mr-2 text-blue-600" />
+                สิทธิประโยชน์พันธมิตร
+              </CardTitle>
+              <CardDescription className="thai-text">
+                เฉพาะสมาชิก GHB CreditBuilder
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-2">
+                <div className="flex items-center justify-between p-2 bg-white rounded-lg">
+                  <div>
+                    <div className="font-semibold text-sm thai-text">
+                      วัสดุก่อสร้าง
+                    </div>
+                    <div className="text-xs text-ghb-gray thai-text">
+                      Home Pro
+                    </div>
+                  </div>
+                  <Badge className="bg-red-100 text-red-700 border-0">
+                    15% OFF
+                  </Badge>
+                </div>
+                <div className="flex items-center justify-between p-2 bg-white rounded-lg">
+                  <div>
+                    <div className="font-semibold text-sm thai-text">
+                      เช็คเครดิตฟรี
+                    </div>
+                    <div className="text-xs text-ghb-gray thai-text">
+                      NCB Credit
+                    </div>
+                  </div>
+                  <Badge className="bg-green-100 text-green-700 border-0 thai-text">
+                    ฟรี
+                  </Badge>
+                </div>
+              </div>
+              <Button variant="outline" className="w-full mt-3 thai-text">
+                ดูทั้งหมด
+              </Button>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* AI Coach Recommendations */}
+        <Card className="border-0 shadow-md bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-l-purple-500">
+          <CardHeader>
+            <CardTitle className="text-ghb-dark thai-text flex items-center">
+              <Target className="w-5 h-5 mr-2 text-purple-600" />
+              คำแนะนำจาก AI Coach
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-3">
+              <div className="flex items-start space-x-3 p-3 bg-white rounded-lg">
+                <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
+                  <PiggyBank className="w-4 h-4 text-purple-600" />
+                </div>
+                <div className="flex-1">
+                  <p className="font-medium text-ghb-dark thai-text">
+                    เพิ่มการออมอีก ฿500 ต่อเดือน
+                  </p>
+                  <p className="text-sm text-ghb-gray thai-text">
+                    จะช่วยเพิ่ม GHB Credit Score อีก 15 คะแนน
+                  </p>
+                </div>
+                <Button size="sm" variant="outline" className="thai-text">
+                  ทำตาม
+                </Button>
+              </div>
+              <div className="flex items-start space-x-3 p-3 bg-white rounded-lg">
+                <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                  <CreditCard className="w-4 h-4 text-blue-600" />
+                </div>
+                <div className="flex-1">
+                  <p className="font-medium text-ghb-dark thai-text">
+                    เชื่อมต่อบัญชี Food Delivery
+                  </p>
+                  <p className="text-sm text-ghb-gray thai-text">
+                    ข้อมูลรายได้เพิ่มเติมจะช่วยประเมินเครดิต
+                  </p>
+                </div>
+                <Button size="sm" variant="outline" className="thai-text">
+                  เชื่อมต่อ
+                </Button>
+              </div>
+            </div>
           </CardContent>
         </Card>
 

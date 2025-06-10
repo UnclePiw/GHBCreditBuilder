@@ -9,6 +9,7 @@ import Missions from "./pages/Missions";
 import LoanSimulator from "./pages/LoanSimulator";
 import Education from "./pages/Education";
 import Chat from "./pages/Chat";
+import CreditSandbox from "./pages/CreditSandbox";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/loan-simulator" element={<LoanSimulator />} />
           <Route path="/education" element={<Education />} />
           <Route path="/chat" element={<Chat />} />
+          <Route path="/credit-sandbox" element={<CreditSandbox />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
