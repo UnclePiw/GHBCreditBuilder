@@ -120,8 +120,8 @@ const Education = () => {
     housing: [
       {
         id: "5",
-        title: "เตรียมความพร้อมก่อนซื้อ���้าน",
-        description: "สิ่งที่ต้องเตรียมก่อนตัดสินใจซื้อบ้าน",
+        title: "เตรียมความพร้อมก่อนซื้อบ้าน",
+        description: "สิ่ง���ี่ต้องเตรียมก่อนตัดสินใจซื้อบ้าน",
         duration: 18,
         type: "article",
         difficulty: "intermediate",
@@ -156,7 +156,7 @@ const Education = () => {
       {
         id: "8",
         title: "การลงทุนเบื้องต้น",
-        description: "หลักการลงทุนและการกระจา��ความเสี่ยง",
+        description: "หลักการลงทุนและการกระจายความเสี่ยง",
         duration: 22,
         type: "video",
         difficulty: "beginner",
@@ -229,7 +229,7 @@ const Education = () => {
       case "video":
         return Video;
       case "interactive":
-        return QuizIcon;
+        return HelpCircle;
       case "article":
         return FileText;
       default:
@@ -366,7 +366,7 @@ const Education = () => {
                       เครดิต หรือ Credit
                       คือความน่าเชื่อถือทางการเงินของบุคคลหรือนิติบุคคล
                       ในการชำระหนี้ตามกำหนดเวลา
-                      โดยสถาบันการเงินจะประเมินจากประวัติการใช���เงิน
+                      โดยสถาบันการเงินจะประเมินจากประวัติการใช้เงิน
                       และการชำระหนี้ในอดีต
                     </p>
 
@@ -389,7 +389,7 @@ const Education = () => {
                         <li>ชำระหนี้ตรงเวลาทุกครั้ง</li>
                         <li>ไม่ใช้เครดิตเกินกำลัง</li>
                         <li>มีบัญชีธนาคารและใช้งานสม่ำเสมอ</li>
-                        <li>จ่ายค่าสาธารณูปโภคตรงเวลา</li>
+                        <li>จ่าย��่าสาธารณูปโภคตรงเวลา</li>
                       </ol>
                     </div>
                   </div>
@@ -545,7 +545,7 @@ const Education = () => {
           <CardHeader>
             <CardTitle className="text-ghb-dark thai-text flex items-center">
               <Trophy className="w-5 h-5 mr-2 text-purple-600" />
-              รางวัลการเรียนรู้
+              รางวั���การเรียนรู้
             </CardTitle>
           </CardHeader>
           <CardContent>
