@@ -247,7 +247,20 @@ export const Navbar: React.FC<NavbarProps> = ({ notifications = 0 }) => {
         to="/chat"
         className="hidden lg:block fixed bottom-8 right-8 z-50 w-14 h-14 bg-[rgb(254,80,0)] rounded-full shadow-lg flex items-center justify-center transition-transform duration-200 hover:scale-105 active:scale-95"
       >
-        <MessageCircle className="w-6 h-6 text-white" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="flex flex-col justify-start items-start text-left text-white"
+        >
+          <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" className="mb-auto" />
+        </svg>
       </Link>
 
       {/* Spacer for fixed header */}
