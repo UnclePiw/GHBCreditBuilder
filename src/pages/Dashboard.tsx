@@ -120,7 +120,7 @@ const Dashboard = () => {
         {/* GHB Credit Score Card with Alternative Data */}
         <Card className="border-0 shadow-lg bg-gradient-primary text-white overflow-hidden relative">
           <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
-          <CardHeader className="pb-4 !bg-[#f5a623]">
+          <CardHeader className="pb-4 !bg-[rgba(126,211,33,1)]">
             <div className="flex items-center justify-between">
               <div>
                 <CardTitle className="text-white thai-text text-lg">
@@ -138,7 +138,7 @@ const Dashboard = () => {
               </div>
             </div>
           </CardHeader>
-          <CardContent className="!bg-[#f5a623]">
+          <CardContent className="!bg-[rgba(126,211,33,1)]">
             <div className="flex items-center justify-between mb-4">
               <div>
                 <div className="text-4xl font-bold text-white mb-1">
@@ -331,7 +331,7 @@ const Dashboard = () => {
                 สินเชื่อจำนวนเล็ก
               </CardTitle>
               <CardDescription className="thai-text">
-                ปลดล็อกจากบันไดเครดิต
+                ป���ดล็อกจากบันไดเครดิต
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -424,7 +424,7 @@ const Dashboard = () => {
                 </div>
                 <div className="flex-1">
                   <p className="font-medium text-ghb-dark thai-text">
-                    เพิ่มการออมอีก ฿500 ต่อเดือน
+                    เพิ่มการออมอีก ฿500 ���่อเดือน
                   </p>
                   <p className="text-sm text-ghb-gray thai-text">
                     จะช่วยเพิ่ม GHB Credit Score อีก 15 คะแนน
