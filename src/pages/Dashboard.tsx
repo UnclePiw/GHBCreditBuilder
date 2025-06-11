@@ -26,6 +26,7 @@ import {
   CheckCircle,
   Plus,
   Shield,
+  MessageCircle,
 } from "lucide-react";
 
 const Dashboard = () => {
