@@ -245,7 +245,7 @@ const Index = () => {
                 maxLength={10}
               />
               <p className="text-xs text-ghb-gray thai-text">
-                จะส่งรหัส OTP เพื่อ���ืนยัน
+                จะส่งรหัส OTP เพื่อยืนยัน
               </p>
             </div>
 
@@ -315,7 +315,7 @@ const Index = () => {
             <Button
               onClick={handleOtpVerify}
               disabled={otp.length !== 6}
-              className="w-full h-12 bg-gradient-primary text-white font-semibold rounded-xl thai-text"
+              className="w-full h-12 !bg-[#fc4f00] text-white font-semibold rounded-xl thai-text"
             >
               ยืนยันและเข้าใช้งาน
             </Button>
