@@ -257,9 +257,9 @@ export const Navbar: React.FC<NavbarProps> = ({ notifications = 0 }) => {
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-          className="flex flex-col justify-start items-start text-left text-white"
+          className="text-white"
         >
-          <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" className="mb-auto" />
+          <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
         </svg>
       </Link>
 
