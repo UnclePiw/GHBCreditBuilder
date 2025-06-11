@@ -82,10 +82,9 @@ const Index = () => {
             <div className="w-24 h-24 bg-gradient-primary rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
               <img
                 loading="lazy"
-                srcSet="https://cdn.builder.io/api/v1/image/assets%2F91b9f3dbf77d41fbbfce132c0e2bb455%2F21f65d45f1644001a6107a7ff42dafe7?format=webp&width=100 100w, https://cdn.builder.io/api/v1/image/assets%2F91b9f3dbf77d41fbbfce132c0e2bb455%2F21f65d45f1644001a6107a7ff42dafe7?format=webp&width=200 200w, https://cdn.builder.io/api/v1/image/assets%2F91b9f3dbf77d41fbbfce132c0e2bb455%2F21f65d45f1644001a6107a7ff42dafe7?format=webp&width=400 400w, https://cdn.builder.io/api/v1/image/assets%2F91b9f3dbf77d41fbbfce132c0e2bb455%2F21f65d45f1644001a6107a7ff42dafe7?format=webp&width=800 800w, https://cdn.builder.io/api/v1/image/assets%2F91b9f3dbf77d41fbbfce132c0e2bb455%2F21f65d45f1644001a6107a7ff42dafe7?format=webp&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets%2F91b9f3dbf77d41fbbfce132c0e2bb455%2F21f65d45f1644001a6107a7ff42dafe7?format=webp&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets%2F91b9f3dbf77d41fbbfce132c0e2bb455%2F21f65d45f1644001a6107a7ff42dafe7?format=webp&width=2000 2000w"
-                src="https://cdn.builder.io/api/v1/image/assets%2F91b9f3dbf77d41fbbfce132c0e2bb455%2F21f65d45f1644001a6107a7ff42dafe7"
-                alt="GHB Logo"
-                className="w-full h-auto object-contain p-5"
+                src="/ghb-credit-builder-logo.png"
+                alt="GHB CreditBuilder Logo"
+                className="w-full h-auto object-contain p-2"
               />
             </div>
 
