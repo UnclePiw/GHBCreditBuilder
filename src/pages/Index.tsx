@@ -252,7 +252,7 @@ const Index = () => {
             <Button
               onClick={handleRegister}
               disabled={nationalId.length !== 13 || phoneNumber.length !== 10}
-              className="w-full h-12 bg-gradient-primary text-white font-semibold rounded-xl thai-text"
+              className="w-full h-12 !bg-[#fc4f00] text-white font-semibold rounded-xl thai-text"
             >
               ขอรหัส OTP
             </Button>
