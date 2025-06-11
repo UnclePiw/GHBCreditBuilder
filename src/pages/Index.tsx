@@ -92,7 +92,7 @@ const Index = () => {
             </p>
 
             <p className="text-sm text-ghb-gray/80 mb-8 thai-text leading-relaxed">
-              แอปสำหรับฟรีแลนซ์และผู้ที่ต้องการสร้างประวัติเครดิตที่ดี
+              แอปสำหรับฟรีแลนซ์และผู้ที่ต้องการสร้างประวัติเครดิตที่���ี
               <br />
               แม้ไม่มีประวัติกับธนาคาร
             </p>
@@ -149,7 +149,7 @@ const Index = () => {
           <div className="max-w-md mx-auto">
             <Button
               onClick={handleGetStarted}
-              className="w-full h-14 bg-gradient-primary text-white font-semibold text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 thai-text"
+              className="w-full h-14 !bg-[#fc4f00] text-white font-semibold text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 thai-text"
             >
               เริ่มต้นใช้งาน
               <ArrowRight className="w-5 h-5 ml-2" />
@@ -239,7 +239,7 @@ const Index = () => {
                 maxLength={10}
               />
               <p className="text-xs text-ghb-gray thai-text">
-                จะส่งรหัส OTP เพื่อยืนยัน
+                จะส่งรหัส OTP เพื่อยื���ยัน
               </p>
             </div>
 
