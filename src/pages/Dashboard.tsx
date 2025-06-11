@@ -86,8 +86,8 @@ const Dashboard = () => {
 
   const upcomingMissions = [
     {
-      title: "บันทึกร��ยจ่าย",
-      description: "��ันทึกรายจ่ายวันนี้",
+      title: "บันทึกรายจ่าย",
+      description:ั"บันทึกรายจ่ายวันนี้",
       deadline: "วันนี้",
       points: 10,
       progress: 80,
@@ -240,7 +240,7 @@ const Dashboard = () => {
             </div>
             <div className="mt-4 p-3 bg-ghb-light/30 rounded-lg">
               <p className="text-sm text-ghb-dark thai-text font-medium">
-                🎉 ขั้นต่อไป: ปลดล็อกสินเชื่อจำ��วนเล็ก
+                🎉 ขั้นต่อไป: ปลดล็อกสินเชื่อจำนวนเล็ก
               </p>
               <p className="text-xs text-ghb-gray thai-text mt-1">
                 วงเงินถึง ฿{nextMicroCredit.toLocaleString()} ดอกเบี้ยพิเศษ
@@ -331,7 +331,7 @@ const Dashboard = () => {
                 สินเชื่อจำนวนเล็ก
               </CardTitle>
               <CardDescription className="thai-text">
-                ป���ดล็อกจากบันไดเครดิต
+                ปลดล็อกจากบันไดเครดิต
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -424,7 +424,7 @@ const Dashboard = () => {
                 </div>
                 <div className="flex-1">
                   <p className="font-medium text-ghb-dark thai-text">
-                    เพิ่มการออมอีก ฿500 ���่อเดือน
+                    เพิ่มการออมอีก ฿500 ต่อเดือน
                   </p>
                   <p className="text-sm text-ghb-gray thai-text">
                     จะช่วยเพิ่ม GHB Credit Score อีก 15 คะแนน
