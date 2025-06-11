@@ -75,7 +75,7 @@ const Index = () => {
 
   if (step === "welcome") {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-ghb-light via-white to-ghb-accent/10">
+      <div className="min-h-screen bg-gradient-to-br from-[rgb(240,240,240)] via-white to-orange-50">
         {/* Hero Section */}
         <div className="pt-12 pb-8 px-4">
           <div className="text-center max-w-md mx-auto">
@@ -89,15 +89,15 @@ const Index = () => {
               />
             </div>
 
-            <h1 className="text-3xl font-bold text-ghb-dark mb-3 thai-text">
+            <h1 className="text-3xl font-bold text-[rgb(51,51,51)] mb-3 thai-text">
               GHB CreditBuilder
             </h1>
 
-            <p className="text-lg text-ghb-gray mb-2 thai-text">
+            <p className="text-lg text-[rgb(85,85,85)] mb-2 thai-text">
               สร้างเครดิตที่ดีไปกับเรา
             </p>
 
-            <p className="text-sm text-ghb-gray/80 mb-8 thai-text leading-relaxed">
+            <p className="text-sm text-[rgb(119,119,119)] mb-8 thai-text leading-relaxed">
               แอปสำหรับฟรีแลนซ์และผู้ที่ต้องการสร้างประวัติเครดิตที่ดี
               <br />
               แม้ไม่มีประวัติกับธนาคาร
@@ -108,14 +108,14 @@ const Index = () => {
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="flex items-center justify-center mb-1">
-                    <span className="text-xl font-bold text-ghb-primary">
+                    <span className="text-xl font-bold text-[rgb(254,80,0)]">
                       {stat.number}
                     </span>
                     {stat.icon && (
-                      <stat.icon className="w-4 h-4 text-ghb-warning ml-1" />
+                      <stat.icon className="w-4 h-4 text-yellow-500 ml-1" />
                     )}
                   </div>
-                  <p className="text-xs text-ghb-gray thai-text">
+                  <p className="text-xs text-[rgb(85,85,85)] thai-text">
                     {stat.label}
                   </p>
                 </div>
@@ -196,7 +196,7 @@ const Index = () => {
 
   if (step === "register") {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-ghb-light via-white to-ghb-accent/10 flex items-center justify-center px-4">
+      <div className="min-h-screen bg-gradient-to-br from-[rgb(240,240,240)] via-white to-orange-50 flex items-center justify-center px-4">
         <Card className="w-full max-w-md border-0 shadow-xl">
           <CardHeader className="text-center">
             <div className="w-16 h-16 bg-gradient-primary rounded-xl flex items-center justify-center mx-auto mb-4">
@@ -275,7 +275,7 @@ const Index = () => {
 
   if (step === "otp") {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-ghb-light via-white to-ghb-accent/10 flex items-center justify-center px-4">
+      <div className="min-h-screen bg-gradient-to-br from-[rgb(240,240,240)] via-white to-orange-50 flex items-center justify-center px-4">
         <Card className="w-full max-w-md border-0 shadow-xl">
           <CardHeader className="text-center">
             <div className="w-16 h-16 bg-gradient-secondary rounded-xl flex items-center justify-center mx-auto mb-4">
