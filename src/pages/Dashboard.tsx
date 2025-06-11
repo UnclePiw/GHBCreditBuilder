@@ -120,7 +120,7 @@ const Dashboard = () => {
         {/* GHB Credit Score Card with Alternative Data */}
         <Card className="border-0 shadow-lg bg-gradient-primary text-white overflow-hidden relative">
           <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
-          <CardHeader className="pb-4 !bg-[rgba(245,166,35,1)]">
+          <CardHeader className="pb-4 !bg-[#f5a623]">
             <div className="flex items-center justify-between">
               <div>
                 <CardTitle className="text-white thai-text text-lg">
@@ -138,7 +138,7 @@ const Dashboard = () => {
               </div>
             </div>
           </CardHeader>
-          <CardContent className="!bg-[rgba(245,166,35,1)]">
+          <CardContent className="!bg-[#f5a623]">
             <div className="flex items-center justify-between mb-4">
               <div>
                 <div className="text-4xl font-bold text-white mb-1">
@@ -203,7 +203,7 @@ const Dashboard = () => {
                   บันไดเครดิต GHB
                 </CardTitle>
                 <CardDescription className="thai-text">
-                  สร้างวินัยการเงินเดือ��ที่ {monthsInProgram}/12 เดือน
+                  สร้างวินัยการเงินเดือนที่ {monthsInProgram}/12 เดือน
                 </CardDescription>
               </div>
               <div className="text-center">
@@ -366,7 +366,7 @@ const Dashboard = () => {
             <CardHeader className="pb-3">
               <CardTitle className="text-ghb-dark thai-text text-lg flex items-center">
                 <Star className="w-5 h-5 mr-2 text-blue-600" />
-                สิท��ิประโยชน์พันธมิตร
+                สิทธิประโยชน์พันธมิตร
               </CardTitle>
               <CardDescription className="thai-text">
                 เฉพาะสมาชิก GHB CreditBuilder
@@ -424,7 +424,7 @@ const Dashboard = () => {
                 </div>
                 <div className="flex-1">
                   <p className="font-medium text-ghb-dark thai-text">
-                    เพิ่��การออมอีก ฿500 ต่อเดือน
+                    เพิ่มการออมอีก ฿500 ต่อเดือน
                   </p>
                   <p className="text-sm text-ghb-gray thai-text">
                     จะช่วยเพิ่ม GHB Credit Score อีก 15 คะแนน
