@@ -64,7 +64,7 @@ const CreditSandbox = () => {
 
   const alternativeDataContribution = [
     {
-      category: "การชำระค่าสาธารณูปโภค",
+      category: "การ��ำระค่าสาธารณูปโภค",
       points: 35,
       description: "ชำระตรงเวลา 12 เดือนต่อเนื่อง",
       icon: Zap,
@@ -78,7 +78,7 @@ const CreditSandbox = () => {
       color: "bg-green-500",
     },
     {
-      category: "กิจกรรมการออมเงิน",
+      category: "��ิจกรรมการออมเงิน",
       points: 42,
       description: "ออมรายวัน + กลุ่มออม + วางแผนการเงิน",
       icon: PiggyBank,
@@ -215,7 +215,7 @@ const CreditSandbox = () => {
           <TabsContent value="overview" className="space-y-6">
             {/* GHB Credit Score Overview */}
             <Card className="border-0 shadow-lg bg-gradient-to-r from-ghb-primary to-ghb-secondary text-white">
-              <CardHeader>
+              <CardHeader className="!bg-[rgba(126,211,33,1)]">
                 <CardTitle className="text-white thai-text text-xl">
                   GHB Credit Score ของคุณ
                 </CardTitle>
@@ -223,7 +223,7 @@ const CreditSandbox = () => {
                   คำนวณจากข้อมูลทางเลือก 15 แหล่ง
                 </CardDescription>
               </CardHeader>
-              <CardContent>
+              <CardContent className="!bg-[rgba(126,211,33,1)]">
                 <div className="grid grid-cols-2 gap-6">
                   <div>
                     <div className="text-4xl font-bold text-white mb-2">
@@ -422,7 +422,7 @@ const CreditSandbox = () => {
                 />
                 <DataSourceCard
                   title="งานเกษตรกรรม"
-                  description="รายได้จากการเกษตร"
+                  description="รายได้จากกา��เกษตร"
                   connected={dataSources.income.agriculture.connected}
                   score={dataSources.income.agriculture.score}
                   detail={`ประสบการณ์ ${dataSources.income.agriculture.months} เดือน`}
@@ -458,7 +458,7 @@ const CreditSandbox = () => {
                 />
                 <DataSourceCard
                   title="การวางแผนการเงิน"
-                  description="ใช้เครื่องมือวางแผนการเงิน"
+                  description="ใช้เครื่อง��ือ��างแผนการเงิน"
                   connected={dataSources.financial.financialPlanning.connected}
                   score={dataSources.financial.financialPlanning.score}
                   detail={`ทำกิจกรรม ${dataSources.financial.financialPlanning.activities} ครั้ง`}
@@ -476,7 +476,7 @@ const CreditSandbox = () => {
             <Card className="border-0 shadow-md">
               <CardHeader>
                 <CardTitle className="text-ghb-dark thai-text">
-                  ประวัติคะแนนเครดิ���
+                  ประวัติคะแนนเครดิต
                 </CardTitle>
                 <CardDescription className="thai-text">
                   การเปลี่ยนแปลงคะแนนใน 6 เดือนที่ผ่านมา
