@@ -569,7 +569,7 @@ const LoanSimulator = () => {
                 <Card className="border-0 shadow-md border-l-4 border-l-ghb-primary">
                   <CardHeader>
                     <CardTitle className="text-ghb-dark thai-text">
-                      คำแนะนำเพื่อ��พิ่มโอกาส
+                      คำแนะนำเพื่อเพิ่มโอกาส
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
@@ -592,7 +592,7 @@ const LoanSimulator = () => {
                             จ่ายบิลตรงเวลา
                           </p>
                           <p className="text-sm text-ghb-gray thai-text">
-                            ชำระค่��สาธารณูปโภคและค่าโทรศัพท์ทุกเดือน
+                            ชำระค่าสาธารณูปโภคและค่าโทรศัพท์ทุกเดือน
                           </p>
                         </div>
                       </div>
