@@ -48,28 +48,49 @@ const Dashboard = () => {
       title: "ภารกิจใหม่",
       description: "มี 3 ภารกิจรอคุณอยู่",
       icon: Target,
-      color: "bg-ghb-primary",
+      color: "bg-[rgb(254,80,0)]",
       link: "/missions",
     },
     {
       title: "เครดิตทดลอง",
       description: "จัดการข้อมูลทางเลือกของคุณ",
       icon: Shield,
-      color: "bg-ghb-accent",
+      color: "bg-green-600",
       link: "/credit-sandbox",
     },
     {
       title: "จำลองสินเชื่อ",
       description: "ดูความเป็นไปได้ในการอนุมัติ",
       icon: CreditCard,
-      color: "bg-purple-500",
+      color: "bg-blue-600",
       link: "/loan-simulator",
+    },
+    {
+      title: "เรียนรู้",
+      description: "บทเรียนใหม่เพิ่มแล้ว",
+      icon: Award,
+      color: "bg-purple-600",
+      link: "/education",
+    },
+    {
+      title: "อัปโหลดเอกสาร",
+      description: "เตรียมเอกสารสำหรับสินเชื่อ",
+      icon: Plus,
+      color: "bg-orange-600",
+      link: "/document-upload",
+    },
+    {
+      title: "ผู้ช่วย AI",
+      description: "ปรึกษาเรื่องเครดิตและสินเชื่อ",
+      icon: MessageCircle,
+      color: "bg-indigo-600",
+      link: "/chat",
     },
   ];
 
   const recentAchievements = [
     {
-      title: "นักออ���ตัวจริง",
+      title: "นักออมตัวจริง",
       description: "ออมเงินครบ 30 วัน",
       date: "วันนี้",
       points: 100,
@@ -86,8 +107,8 @@ const Dashboard = () => {
 
   const upcomingMissions = [
     {
-      title: "บันทึกร��ยจ่าย",
-      description: "��ันทึกรายจ่ายวันนี้",
+      title: "บันทึกรายจ่าย",
+      description: "บันทึกรายจ่ายวันนี้",
       deadline: "วันนี้",
       points: 10,
       progress: 80,
@@ -117,14 +138,18 @@ const Dashboard = () => {
                   วันนี้เป็นวันที่ดีในการสร้างเครดิต
                 </p>
               </div>
-              <div className="flex items-center space-x-4 text-[rgb(85,85,85)]">
+              <div className="flex items-center space-x-6 text-[rgb(85,85,85)]">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-[rgb(254,80,0)]">{currentStreak}</div>
+                  <div className="text-3xl font-bold text-[rgb(254,80,0)]">
+                    {currentStreak}
+                  </div>
                   <div className="text-sm thai-text">วันต่อเนื่อง</div>
                 </div>
                 <div className="w-px h-12 bg-[rgb(238,238,238)]"></div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-[rgb(254,80,0)]">{ghbPoints.toLocaleString()}</div>
+                  <div className="text-3xl font-bold text-[rgb(254,80,0)]">
+                    {ghbPoints.toLocaleString()}
+                  </div>
                   <div className="text-sm thai-text">GHB Points</div>
                 </div>
               </div>
@@ -135,16 +160,6 @@ const Dashboard = () => {
 
       {/* Main Content Sections */}
       <div className="container mx-auto px-4 space-y-12 mb-20">
-        {/* Welcome Section */}
-        <div className="text-center py-4">
-          <h2 className="text-2xl font-bold text-ghb-dark thai-text mb-2">
-            สวัสดี คุณสมชาย! 👋
-          </h2>
-          <p className="text-ghb-gray thai-text">
-            วันนี้เป็นวันที่ดีในการสร้างเครดิต
-          </p>
-        </div>
-
         {/* Credit Score Section - GHB Bank Style */}
         <section className="mb-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -195,20 +210,36 @@ const Dashboard = () => {
                 {/* Alternative Data Sources */}
                 <div className="grid grid-cols-2 gap-3 text-sm">
                   <div className="bg-[rgb(240,240,240)] rounded-lg p-3">
-                    <div className="text-[rgb(85,85,85)] thai-text">ชำระค่าสาธารณูปโภค</div>
-                    <div className="text-[rgb(51,51,51)] font-semibold">✓ ตรงเวลา 12 เดือน</div>
+                    <div className="text-[rgb(85,85,85)] thai-text">
+                      ชำระค่าสาธารณูปโภค
+                    </div>
+                    <div className="text-[rgb(51,51,51)] font-semibold">
+                      ✓ ตรงเวลา 12 เดือน
+                    </div>
                   </div>
                   <div className="bg-[rgb(240,240,240)] rounded-lg p-3">
-                    <div className="text-[rgb(85,85,85)] thai-text">รายได้ E-commerce</div>
-                    <div className="text-[rgb(51,51,51)] font-semibold">✓ สม่ำเสมอ</div>
+                    <div className="text-[rgb(85,85,85)] thai-text">
+                      รายได้ E-commerce
+                    </div>
+                    <div className="text-[rgb(51,51,51)] font-semibold">
+                      ✓ สม่ำเสมอ
+                    </div>
                   </div>
                   <div className="bg-[rgb(240,240,240)] rounded-lg p-3">
-                    <div className="text-[rgb(85,85,85)] thai-text">การออมในแอป</div>
-                    <div className="text-[rgb(51,51,51)] font-semibold">✓ ทุกวัน {currentStreak} วัน</div>
+                    <div className="text-[rgb(85,85,85)] thai-text">
+                      การออมในแอป
+                    </div>
+                    <div className="text-[rgb(51,51,51)] font-semibold">
+                      ✓ ทุกวัน {currentStreak} วัน
+                    </div>
                   </div>
                   <div className="bg-[rgb(240,240,240)] rounded-lg p-3">
-                    <div className="text-[rgb(85,85,85)] thai-text">กิจกรรมการเงิน</div>
-                    <div className="text-[rgb(51,51,51)] font-semibold">✓ กลุ่มออม</div>
+                    <div className="text-[rgb(85,85,85)] thai-text">
+                      กิจกรรมการเงิน
+                    </div>
+                    <div className="text-[rgb(51,51,51)] font-semibold">
+                      ✓ กลุ่มออม
+                    </div>
                   </div>
                 </div>
               </CardContent>
@@ -228,24 +259,36 @@ const Dashboard = () => {
               <CardContent className="p-6">
                 <div className="mb-4">
                   <div className="flex justify-between text-sm mb-2">
-                    <span className="text-[rgb(85,85,85)] thai-text">ความคืบหน้า</span>
-                    <span className="font-semibold text-[rgb(254,80,0)]">{creditLadderProgress}%</span>
+                    <span className="text-[rgb(85,85,85)] thai-text">
+                      ความคืบหน้า
+                    </span>
+                    <span className="font-semibold text-[rgb(254,80,0)]">
+                      {creditLadderProgress}%
+                    </span>
                   </div>
                   <Progress value={creditLadderProgress} className="h-3" />
                 </div>
 
                 <div className="grid grid-cols-3 gap-3 text-xs mb-4">
                   <div className="text-center p-3 bg-green-50 rounded-lg border border-green-200">
-                    <div className="font-semibold text-green-700 thai-text">เสร็จแล้ว</div>
+                    <div className="font-semibold text-green-700 thai-text">
+                      เสร็จแล้ว
+                    </div>
                     <div className="text-green-600 thai-text">ออมรายวัน</div>
                   </div>
                   <div className="text-center p-3 bg-green-50 rounded-lg border border-green-200">
-                    <div className="font-semibold text-green-700 thai-text">เสร็จแล้ว</div>
+                    <div className="font-semibold text-green-700 thai-text">
+                      เสร็จแล้ว
+                    </div>
                     <div className="text-green-600 thai-text">ชำระตรงเวลา</div>
                   </div>
                   <div className="text-center p-3 bg-yellow-50 rounded-lg border border-yellow-200">
-                    <div className="font-semibold text-yellow-700 thai-text">กำลังทำ</div>
-                    <div className="text-yellow-600 thai-text">วางแผนการเงิน</div>
+                    <div className="font-semibold text-yellow-700 thai-text">
+                      กำลังทำ
+                    </div>
+                    <div className="text-yellow-600 thai-text">
+                      วางแผนการเงิน
+                    </div>
                   </div>
                 </div>
 
@@ -261,6 +304,7 @@ const Dashboard = () => {
             </Card>
           </div>
         </section>
+
         {/* Services Section - GHB Bank Style */}
         <section className="bg-[rgb(240,240,240)] py-12 -mx-4">
           <div className="container mx-auto px-4">
@@ -268,26 +312,29 @@ const Dashboard = () => {
               บริการของเรา
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">{quickActions.map((action, index) => {
-              const Icon = action.icon;
-              return (
-                <Link key={index} to={action.link}>
-                  <Card className="border border-[rgb(238,238,238)] shadow-lg hover:shadow-xl transition-all duration-200 bg-white">
-                    <CardContent className="p-6 text-center">
-                      <div className={`w-16 h-16 ${action.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
-                        <Icon className="w-8 h-8 text-white" />
-                      </div>
-                      <h3 className="font-semibold text-[rgb(51,51,51)] thai-text text-lg mb-2">
-                        {action.title}
-                      </h3>
-                      <p className="text-[rgb(85,85,85)] thai-text text-sm leading-relaxed">
-                        {action.description}
-                      </p>
-                    </CardContent>
-                  </Card>
-                </Link>
-              );
-            })}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {quickActions.map((action, index) => {
+                const Icon = action.icon;
+                return (
+                  <Link key={index} to={action.link}>
+                    <Card className="border border-[rgb(238,238,238)] shadow-lg hover:shadow-xl transition-all duration-200 bg-white">
+                      <CardContent className="p-6 text-center">
+                        <div
+                          className={`w-16 h-16 ${action.color} rounded-xl flex items-center justify-center mx-auto mb-4`}
+                        >
+                          <Icon className="w-8 h-8 text-white" />
+                        </div>
+                        <h3 className="font-semibold text-[rgb(51,51,51)] thai-text text-lg mb-2">
+                          {action.title}
+                        </h3>
+                        <p className="text-[rgb(85,85,85)] thai-text text-sm leading-relaxed">
+                          {action.description}
+                        </p>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -305,7 +352,10 @@ const Dashboard = () => {
                 {recentAchievements.map((achievement, index) => {
                   const Icon = achievement.icon;
                   return (
-                    <Card key={index} className="border border-[rgb(238,238,238)] shadow-sm">
+                    <Card
+                      key={index}
+                      className="border border-[rgb(238,238,238)] shadow-sm"
+                    >
                       <CardContent className="flex items-center p-4">
                         <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mr-4">
                           <Icon className="w-6 h-6 text-green-600" />
@@ -342,14 +392,21 @@ const Dashboard = () => {
                   ภารกิจที่กำลังมา
                 </h3>
                 <Link to="/missions">
-                  <Button variant="outline" size="sm" className="thai-text border-[rgb(254,80,0)] text-[rgb(254,80,0)] hover:bg-[rgb(254,80,0)] hover:text-white">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="thai-text border-[rgb(254,80,0)] text-[rgb(254,80,0)] hover:bg-[rgb(254,80,0)] hover:text-white"
+                  >
                     ดูทั้งหมด
                   </Button>
                 </Link>
               </div>
               <div className="space-y-4">
                 {upcomingMissions.map((mission, index) => (
-                  <Card key={index} className="border border-[rgb(238,238,238)] shadow-sm">
+                  <Card
+                    key={index}
+                    className="border border-[rgb(238,238,238)] shadow-sm"
+                  >
                     <CardContent className="p-4">
                       <div className="flex items-center justify-between mb-3">
                         <div>
@@ -380,379 +437,6 @@ const Dashboard = () => {
             </div>
           </div>
         </section>
-          <CardHeader>
-            <div className="flex items-center justify-between">
-              <div>
-                <CardTitle className="text-ghb-dark thai-text flex items-center">
-                  <Target className="w-5 h-5 mr-2 text-ghb-primary" />
-                  บันไดเครดิต GHB
-                </CardTitle>
-                <CardDescription className="thai-text">
-                  สร้างวินัยการเงินเดือนที่ {monthsInProgram}/12 เดือน
-                </CardDescription>
-              </div>
-              <div className="text-center">
-                <Badge className="bg-ghb-primary/10 text-ghb-primary border-0">
-                  {creditLadderProgress}%
-                </Badge>
-                <div className="text-xs text-ghb-gray mt-1 thai-text">
-                  เกือบจบ!
-                </div>
-              </div>
-            </div>
-          </CardHeader>
-          <CardContent>
-            <Progress value={creditLadderProgress} className="h-3 mb-4" />
-            <div className="grid grid-cols-3 gap-3 text-xs">
-              <div className="text-center p-2 bg-green-50 rounded-lg">
-                <div className="font-semibold text-green-700 thai-text">
-                  เสร็จแล้ว
-                </div>
-                <div className="text-green-600 thai-text">ออมรายวัน</div>
-              </div>
-              <div className="text-center p-2 bg-green-50 rounded-lg">
-                <div className="font-semibold text-green-700 thai-text">
-                  เสร็จแล้ว
-                </div>
-                <div className="text-green-600 thai-text">ชำระตรงเวลา</div>
-              </div>
-              <div className="text-center p-2 bg-yellow-50 rounded-lg">
-                <div className="font-semibold text-yellow-700 thai-text">
-                  กำลังทำ
-                </div>
-                <div className="text-yellow-600 thai-text">วางแผนการเงิน</div>
-              </div>
-            </div>
-            <div className="mt-4 p-3 bg-ghb-light/30 rounded-lg">
-              <p className="text-sm text-ghb-dark thai-text font-medium">
-                🎉 ขั้นต่อไป: ปลดล็อกสินเชื่อจำ��วนเล็ก
-              </p>
-              <p className="text-xs text-ghb-gray thai-text mt-1">
-                วงเงินถึง ฿{nextMicroCredit.toLocaleString()} ดอกเบี้ยพิเศษ
-              </p>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Stats Grid */}
-        <div className="grid grid-cols-2 gap-4">
-          <Card className="border-0 shadow-md">
-            <CardContent className="p-4 text-center">
-              <div className="w-12 h-12 bg-ghb-warning/10 rounded-xl flex items-center justify-center mx-auto mb-3">
-                <Trophy className="w-6 h-6 text-ghb-warning" />
-              </div>
-              <div className="text-2xl font-bold text-ghb-dark">
-                {ghbPoints.toLocaleString()}
-              </div>
-              <p className="text-sm text-ghb-gray thai-text">GHB Points</p>
-              <Badge variant="outline" className="text-xs mt-1">
-                แลกรางวัลได้
-              </Badge>
-            </CardContent>
-          </Card>
-
-          <Card className="border-0 shadow-md">
-            <CardContent className="p-4 text-center">
-              <div className="w-12 h-12 bg-ghb-primary/10 rounded-xl flex items-center justify-center mx-auto mb-3">
-                <Flame className="w-6 h-6 text-ghb-primary" />
-              </div>
-              <div className="text-2xl font-bold text-ghb-dark">
-                {currentStreak}
-              </div>
-              <p className="text-sm text-ghb-gray thai-text">วันต่อเนื่อง</p>
-              <Badge variant="outline" className="text-xs mt-1 thai-text">
-                บันไดเครดิต
-              </Badge>
-            </CardContent>
-          </Card>
-        </div>
-
-        {/* Savings Progress */}
-        <Card className="border-0 shadow-md">
-          <CardHeader>
-            <div className="flex items-center justify-between">
-              <div>
-                <CardTitle className="text-ghb-dark thai-text flex items-center">
-                  <PiggyBank className="w-5 h-5 mr-2 text-ghb-success" />
-                  เป้าหมายการออม
-                </CardTitle>
-                <CardDescription className="thai-text">
-                  เดือนมีนาคม 2024
-                </CardDescription>
-              </div>
-              <Button variant="ghost" size="sm">
-                <Plus className="w-4 h-4" />
-              </Button>
-            </div>
-          </CardHeader>
-          <CardContent>
-            <div className="flex items-end justify-between mb-3">
-              <div>
-                <div className="text-2xl font-bold text-ghb-dark">
-                  ฿{monthlySavings.toLocaleString()}
-                </div>
-                <p className="text-sm text-ghb-gray thai-text">
-                  จาก ฿{savingsGoal.toLocaleString()}
-                </p>
-              </div>
-              <Badge className="bg-ghb-success/10 text-ghb-success border-0">
-                {Math.round((monthlySavings / savingsGoal) * 100)}%
-              </Badge>
-            </div>
-            <Progress
-              value={(monthlySavings / savingsGoal) * 100}
-              className="h-2"
-            />
-          </CardContent>
-        </Card>
-
-        {/* Micro-Credit Trial & Partnership Benefits */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {/* Available Micro-Credit */}
-          <Card className="border-0 shadow-md bg-gradient-to-r from-green-50 to-emerald-50">
-            <CardHeader className="pb-3">
-              <CardTitle className="text-ghb-dark thai-text text-lg flex items-center">
-                <CreditCard className="w-5 h-5 mr-2 text-green-600" />
-                สินเชื่อจำนวนเล็ก
-              </CardTitle>
-              <CardDescription className="thai-text">
-                ปลดล็อกจากบันไดเครดิต
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold text-green-700 mb-2">
-                ฿{nextMicroCredit.toLocaleString()}
-              </div>
-              <div className="space-y-2 text-xs">
-                <div className="flex justify-between">
-                  <span className="text-ghb-gray thai-text">
-                    อัตราดอกเบี้ย:
-                  </span>
-                  <span className="font-semibold text-green-600">
-                    6.5% ต่อปี
-                  </span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-ghb-gray thai-text">วัตถุประสงค์:</span>
-                  <span className="font-semibold thai-text">วางดาวน์บ้าน</span>
-                </div>
-              </div>
-              <Button
-                className="w-full mt-3 bg-green-600 hover:bg-green-700 text-white thai-text"
-                onClick={() => (window.location.href = "/document-upload")}
-              >
-                เตรียมเอกสาร
-              </Button>
-            </CardContent>
-          </Card>
-
-          {/* Partnership Benefits */}
-          <Card className="border-0 shadow-md bg-gradient-to-r from-blue-50 to-indigo-50">
-            <CardHeader className="pb-3">
-              <CardTitle className="text-ghb-dark thai-text text-lg flex items-center">
-                <Star className="w-5 h-5 mr-2 text-blue-600" />
-                สิทธิประโยชน์พันธมิตร
-              </CardTitle>
-              <CardDescription className="thai-text">
-                เฉพาะสมาชิก GHB CreditBuilder
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-2">
-                <div className="flex items-center justify-between p-2 bg-white rounded-lg">
-                  <div>
-                    <div className="font-semibold text-sm thai-text">
-                      วัสดุก่อสร้าง
-                    </div>
-                    <div className="text-xs text-ghb-gray thai-text">
-                      Home Pro
-                    </div>
-                  </div>
-                  <Badge className="bg-red-100 text-red-700 border-0">
-                    15% OFF
-                  </Badge>
-                </div>
-                <div className="flex items-center justify-between p-2 bg-white rounded-lg">
-                  <div>
-                    <div className="font-semibold text-sm thai-text">
-                      เช็คเครดิตฟรี
-                    </div>
-                    <div className="text-xs text-ghb-gray thai-text">
-                      NCB Credit
-                    </div>
-                  </div>
-                  <Badge className="bg-green-100 text-green-700 border-0 thai-text">
-                    ฟรี
-                  </Badge>
-                </div>
-              </div>
-              <Button variant="outline" className="w-full mt-3 thai-text">
-                ดูทั้งหมด
-              </Button>
-            </CardContent>
-          </Card>
-        </div>
-
-        {/* AI Coach Recommendations */}
-        <Card className="border-0 shadow-md bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-l-purple-500">
-          <CardHeader>
-            <CardTitle className="text-ghb-dark thai-text flex items-center">
-              <Target className="w-5 h-5 mr-2 text-purple-600" />
-              คำแนะนำจาก AI Coach
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="space-y-3">
-              <div className="flex items-start space-x-3 p-3 bg-white rounded-lg">
-                <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
-                  <PiggyBank className="w-4 h-4 text-purple-600" />
-                </div>
-                <div className="flex-1">
-                  <p className="font-medium text-ghb-dark thai-text">
-                    เพิ่มการออมอีก ฿500 ต่อเดือน
-                  </p>
-                  <p className="text-sm text-ghb-gray thai-text">
-                    จะช่วยเพิ่ม GHB Credit Score อีก 15 คะแนน
-                  </p>
-                </div>
-                <Button size="sm" variant="outline" className="thai-text">
-                  ทำตาม
-                </Button>
-              </div>
-              <div className="flex items-start space-x-3 p-3 bg-white rounded-lg">
-                <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                  <CreditCard className="w-4 h-4 text-blue-600" />
-                </div>
-                <div className="flex-1">
-                  <p className="font-medium text-ghb-dark thai-text">
-                    เชื่อมต่อบัญชี Food Delivery
-                  </p>
-                  <p className="text-sm text-ghb-gray thai-text">
-                    ข้อมูลรายได้เพิ่มเติมจะช่วยประเมินเครดิต
-                  </p>
-                </div>
-                <Button size="sm" variant="outline" className="thai-text">
-                  เชื่อมต่อ
-                </Button>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Quick Actions */}
-        <div>
-          <h3 className="text-lg font-semibold text-ghb-dark thai-text mb-4">
-            การดำเนินการด่วน
-          </h3>
-          <div className="grid grid-cols-1 gap-3">
-            {quickActions.map((action, index) => {
-              const Icon = action.icon;
-              return (
-                <Link key={index} to={action.link}>
-                  <Card className="border-0 shadow-md hover:shadow-lg transition-all duration-200 active:scale-98">
-                    <CardContent className="flex items-center p-4">
-                      <div
-                        className={`w-12 h-12 ${action.color} rounded-xl flex items-center justify-center mr-4`}
-                      >
-                        <Icon className="w-6 h-6 text-white" />
-                      </div>
-                      <div className="flex-1">
-                        <h4 className="font-semibold text-ghb-dark thai-text">
-                          {action.title}
-                        </h4>
-                        <p className="text-sm text-ghb-gray thai-text">
-                          {action.description}
-                        </p>
-                      </div>
-                      <ArrowRight className="w-5 h-5 text-ghb-gray" />
-                    </CardContent>
-                  </Card>
-                </Link>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* Recent Achievements */}
-        <div>
-          <h3 className="text-lg font-semibold text-ghb-dark thai-text mb-4">
-            ความสำเร็จล่าสุด
-          </h3>
-          <div className="space-y-3">
-            {recentAchievements.map((achievement, index) => {
-              const Icon = achievement.icon;
-              return (
-                <Card key={index} className="border-0 shadow-md">
-                  <CardContent className="flex items-center p-4">
-                    <div className="w-12 h-12 bg-ghb-success/10 rounded-xl flex items-center justify-center mr-4">
-                      <Icon className="w-6 h-6 text-ghb-success" />
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="font-semibold text-ghb-dark thai-text">
-                        {achievement.title}
-                      </h4>
-                      <p className="text-sm text-ghb-gray thai-text">
-                        {achievement.description}
-                      </p>
-                      <div className="flex items-center mt-1">
-                        <Badge variant="secondary" className="text-xs">
-                          +{achievement.points} คะแนน
-                        </Badge>
-                        <span className="text-xs text-ghb-gray ml-2 thai-text">
-                          {achievement.date}
-                        </span>
-                      </div>
-                    </div>
-                    <CheckCircle className="w-5 h-5 text-ghb-success" />
-                  </CardContent>
-                </Card>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* Upcoming Missions */}
-        <div>
-          <div className="flex items-center justify-between mb-4">
-            <h3 className="text-lg font-semibold text-ghb-dark thai-text">
-              ภารกิจที่กำลังมา
-            </h3>
-            <Link to="/missions">
-              <Button variant="ghost" size="sm" className="thai-text">
-                ดูทั้งหมด
-              </Button>
-            </Link>
-          </div>
-          <div className="space-y-3">
-            {upcomingMissions.map((mission, index) => (
-              <Card key={index} className="border-0 shadow-md">
-                <CardContent className="p-4">
-                  <div className="flex items-center justify-between mb-3">
-                    <div>
-                      <h4 className="font-semibold text-ghb-dark thai-text">
-                        {mission.title}
-                      </h4>
-                      <p className="text-sm text-ghb-gray thai-text">
-                        {mission.description}
-                      </p>
-                    </div>
-                    <Badge variant="outline" className="text-xs thai-text">
-                      +{mission.points} คะแนน
-                    </Badge>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <Progress
-                      value={mission.progress}
-                      className="flex-1 h-2 mr-3"
-                    />
-                    <span className="text-xs text-ghb-gray thai-text">
-                      {mission.deadline}
-                    </span>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
       </div>
     </Layout>
   );
