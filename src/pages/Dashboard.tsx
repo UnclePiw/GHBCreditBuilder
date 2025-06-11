@@ -87,7 +87,7 @@ const Dashboard = () => {
   const upcomingMissions = [
     {
       title: "บันทึกร��ยจ่าย",
-      description: "บันทึกรายจ่ายวันนี้",
+      description: "��ันทึกรายจ่ายวันนี้",
       deadline: "วันนี้",
       points: 10,
       progress: 80,
@@ -203,7 +203,7 @@ const Dashboard = () => {
                   บันไดเครดิต GHB
                 </CardTitle>
                 <CardDescription className="thai-text">
-                  สร้างวินัยการเงินเดือนที่ {monthsInProgram}/12 เดือน
+                  สร้างวินัยการเงินเดือ��ที่ {monthsInProgram}/12 เดือน
                 </CardDescription>
               </div>
               <div className="text-center">
@@ -240,7 +240,7 @@ const Dashboard = () => {
             </div>
             <div className="mt-4 p-3 bg-ghb-light/30 rounded-lg">
               <p className="text-sm text-ghb-dark thai-text font-medium">
-                🎉 ขั้นต่อไป: ปลดล็อกสินเชื่อจำนวนเล็ก
+                🎉 ขั้นต่อไป: ปลดล็อกสินเชื่อจำ��วนเล็ก
               </p>
               <p className="text-xs text-ghb-gray thai-text mt-1">
                 วงเงินถึง ฿{nextMicroCredit.toLocaleString()} ดอกเบี้ยพิเศษ
@@ -344,7 +344,7 @@ const Dashboard = () => {
                     อัตราดอกเบี้ย:
                   </span>
                   <span className="font-semibold text-green-600">
-                    6.5% ต���อปี
+                    6.5% ต่อปี
                   </span>
                 </div>
                 <div className="flex justify-between">
@@ -366,7 +366,7 @@ const Dashboard = () => {
             <CardHeader className="pb-3">
               <CardTitle className="text-ghb-dark thai-text text-lg flex items-center">
                 <Star className="w-5 h-5 mr-2 text-blue-600" />
-                สิทธิประโยชน์พันธมิตร
+                สิท��ิประโยชน์พันธมิตร
               </CardTitle>
               <CardDescription className="thai-text">
                 เฉพาะสมาชิก GHB CreditBuilder
@@ -424,7 +424,7 @@ const Dashboard = () => {
                 </div>
                 <div className="flex-1">
                   <p className="font-medium text-ghb-dark thai-text">
-                    เพิ่มการออมอีก ฿500 ต่อเดือน
+                    เพิ่��การออมอีก ฿500 ต่อเดือน
                   </p>
                   <p className="text-sm text-ghb-gray thai-text">
                     จะช่วยเพิ่ม GHB Credit Score อีก 15 คะแนน
