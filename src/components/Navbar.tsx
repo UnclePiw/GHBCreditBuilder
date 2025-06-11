@@ -71,7 +71,7 @@ export const Navbar: React.FC<NavbarProps> = ({ notifications = 0 }) => {
               <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
                 <img
                   loading="lazy"
-                  src="/ghb-credit-builder-logo.png"
+                  src="/ghb-logo.svg"
                   alt="GHB CreditBuilder Logo"
                   className="w-full h-auto object-contain p-1"
                 />

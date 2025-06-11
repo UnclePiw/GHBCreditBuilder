@@ -82,7 +82,7 @@ const Index = () => {
             <div className="w-24 h-24 bg-gradient-primary rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
               <img
                 loading="lazy"
-                src="/ghb-credit-builder-logo.png"
+                src="/ghb-logo.svg"
                 alt="GHB CreditBuilder Logo"
                 className="w-full h-auto object-contain p-2"
               />
