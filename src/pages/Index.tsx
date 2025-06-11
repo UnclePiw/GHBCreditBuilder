@@ -79,14 +79,16 @@ const Index = () => {
         {/* Hero Section */}
         <div className="pt-12 pb-8 px-4">
           <div className="text-center max-w-md mx-auto">
-            <div className="w-24 h-24 bg-gradient-primary rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
-              <img
-                loading="lazy"
-                src="/ghb-logo.svg"
-                alt="GHB CreditBuilder Logo"
-                className="w-full h-auto object-contain p-2"
-              />
-            </div>
+            <div
+              className="w-24 h-24 rounded-2xl flex items-center justify-center mx-auto mb-6"
+              style={{
+                backgroundImage:
+                  "url(https://cdn.builder.io/api/v1/image/assets%2F91b9f3dbf77d41fbbfce132c0e2bb455%2Ff402feef87b4479bb8f616b1c2cc1936)",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+              }}
+            />
 
             <h1 className="text-3xl font-bold text-[rgb(51,51,51)] mb-3 thai-text">
               GHB CreditBuilder
