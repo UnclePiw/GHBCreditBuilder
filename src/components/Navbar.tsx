@@ -258,8 +258,7 @@ export const Navbar: React.FC<NavbarProps> = ({ notifications = 0 }) => {
           strokeLinecap="round"
           strokeLinejoin="round"
           className="text-white flex flex-col justify-start items-start"
-          style={{ margin: '2px auto auto' }}
-        >
+          style={{ margin: "2px auto auto" }}
         >
           <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
         </svg>
