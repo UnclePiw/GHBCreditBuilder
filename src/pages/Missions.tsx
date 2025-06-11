@@ -87,7 +87,7 @@ const Missions = () => {
     },
     {
       id: "5",
-      title: "จ่ายบิล���รบทุกรายการ",
+      title: "จ่ายบิลครบทุกรายการ",
       description: "ชำระค่าน้ำ ค่าไฟ และค่าโทรศัพท์ตรงเวลา",
       icon: CheckCircle2,
       difficulty: "easy",

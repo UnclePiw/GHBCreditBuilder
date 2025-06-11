@@ -180,7 +180,7 @@ const DocumentUpload = () => {
         {
           id: "professional_license",
           name: "ใบประกอบวิชาชีพ",
-          description: "กรณีเป���นวิชาชีพที่ต้องมีใบประกอบวิชาชีพ",
+          description: "กรณีเปลี่ยนนวิชาชีพที่ต้องมีใบประกอบวิชาชีพ",
           required: false,
           files: [],
           maxFiles: 2,
@@ -209,7 +209,7 @@ const DocumentUpload = () => {
         {
           id: "refinance_docs",
           name: "สัญญากู้เงินและสัญญาจำนองเดิม",
-          description: "กรณีไถ่ถอนจำนอง - ��ัญญากับสถาบันการเงินเดิม",
+          description: "กรณีไถ่ถอนจำนอง - สัญญากับสถาบันการเงินเดิม",
           required: false,
           files: [],
           maxFiles: 3,

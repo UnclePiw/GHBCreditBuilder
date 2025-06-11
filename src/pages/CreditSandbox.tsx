@@ -64,7 +64,7 @@ const CreditSandbox = () => {
 
   const alternativeDataContribution = [
     {
-      category: "การ��ำระค่าสาธารณูปโภค",
+      category: "การขำระค่าสาธารณูปโภค",
       points: 35,
       description: "ชำระตรงเวลา 12 เดือนต่อเนื่อง",
       icon: Zap,
@@ -78,7 +78,7 @@ const CreditSandbox = () => {
       color: "bg-green-500",
     },
     {
-      category: "��ิจกรรมการออมเงิน",
+      category: "กิจกรรมการออมเงิน",
       points: 42,
       description: "ออมรายวัน + กลุ่มออม + วางแผนการเงิน",
       icon: PiggyBank,
@@ -422,7 +422,7 @@ const CreditSandbox = () => {
                 />
                 <DataSourceCard
                   title="งานเกษตรกรรม"
-                  description="รายได้จากกา��เกษตร"
+                  description="รายได้จากการเกษตร"
                   connected={dataSources.income.agriculture.connected}
                   score={dataSources.income.agriculture.score}
                   detail={`ประสบการณ์ ${dataSources.income.agriculture.months} เดือน`}
@@ -458,7 +458,7 @@ const CreditSandbox = () => {
                 />
                 <DataSourceCard
                   title="การวางแผนการเงิน"
-                  description="ใช้เครื่อง��ือ��างแผนการเงิน"
+                  description="ใช้เครื่องมือวางแผนการเงิน"
                   connected={dataSources.financial.financialPlanning.connected}
                   score={dataSources.financial.financialPlanning.score}
                   detail={`ทำกิจกรรม ${dataSources.financial.financialPlanning.activities} ครั้ง`}

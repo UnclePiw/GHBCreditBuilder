@@ -133,7 +133,7 @@ const Chat = () => {
 📌 จ่ายค่าสาธารณูปโภคตรงเวลา
 
 คุณต้องการทราบรายละเอียดในส่วนไหนเพิ่มเติมครับ?`;
-      quickReplies = ["��ิธีเพิ่มคะแนน", "ตรวจสอบคะแนน", "ดูบทเรียน"];
+      quickReplies = ["วิธีเพิ่มคะแนน", "ตรวจสอบคะแนน", "ดูบทเรียน"];
     } else if (
       lowerMessage.includes("สินเชื่อ") ||
       lowerMessage.includes("บ้าน")
@@ -398,7 +398,7 @@ const Chat = () => {
                     value={inputMessage}
                     onChange={(e) => setInputMessage(e.target.value)}
                     onKeyPress={handleKeyPress}
-                    placeholder="พ��มพ์คำถามของคุณ..."
+                    placeholder="ถามคำถามของคุณ..."
                     className="pr-12 h-12 thai-text"
                     disabled={isTyping}
                   />
