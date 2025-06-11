@@ -111,7 +111,7 @@ const Dashboard = () => {
             <div className="flex flex-col lg:flex-row items-center justify-between">
               <div className="text-center lg:text-left mb-6 lg:mb-0">
                 <h1 className="text-3xl lg:text-4xl font-bold text-[rgb(51,51,51)] thai-text mb-3">
-                  สวั��ดี คุณสมชาย! 👋
+                  สวัสดี คุณสมชาย! 👋
                 </h1>
                 <p className="text-[rgb(85,85,85)] thai-text text-lg">
                   วันนี้เป็นวันที่ดีในการสร้างเครดิต
@@ -261,8 +261,125 @@ const Dashboard = () => {
             </Card>
           </div>
         </section>
-        {/* Credit Ladder Progress */}
-        <Card className="border-0 shadow-md border-l-4 border-l-ghb-primary">
+        {/* Services Section - GHB Bank Style */}
+        <section className="bg-[rgb(240,240,240)] py-12 -mx-4">
+          <div className="container mx-auto px-4">
+            <h2 className="text-2xl font-bold text-[rgb(51,51,51)] thai-text mb-8 text-center">
+              บริการของเรา
+            </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">{quickActions.map((action, index) => {
+              const Icon = action.icon;
+              return (
+                <Link key={index} to={action.link}>
+                  <Card className="border border-[rgb(238,238,238)] shadow-lg hover:shadow-xl transition-all duration-200 bg-white">
+                    <CardContent className="p-6 text-center">
+                      <div className={`w-16 h-16 ${action.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
+                        <Icon className="w-8 h-8 text-white" />
+                      </div>
+                      <h3 className="font-semibold text-[rgb(51,51,51)] thai-text text-lg mb-2">
+                        {action.title}
+                      </h3>
+                      <p className="text-[rgb(85,85,85)] thai-text text-sm leading-relaxed">
+                        {action.description}
+                      </p>
+                    </CardContent>
+                  </Card>
+                </Link>
+              );
+            })}
+            </div>
+          </div>
+        </section>
+
+        {/* Recent Activities Section */}
+        <section className="mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Recent Achievements */}
+            <div>
+              <h3 className="text-xl font-semibold text-[rgb(51,51,51)] thai-text mb-6 flex items-center">
+                <Award className="w-6 h-6 mr-3 text-[rgb(254,80,0)]" />
+                ความสำเร็จล่าสุด
+              </h3>
+              <div className="space-y-4">
+                {recentAchievements.map((achievement, index) => {
+                  const Icon = achievement.icon;
+                  return (
+                    <Card key={index} className="border border-[rgb(238,238,238)] shadow-sm">
+                      <CardContent className="flex items-center p-4">
+                        <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mr-4">
+                          <Icon className="w-6 h-6 text-green-600" />
+                        </div>
+                        <div className="flex-1">
+                          <h4 className="font-semibold text-[rgb(51,51,51)] thai-text">
+                            {achievement.title}
+                          </h4>
+                          <p className="text-sm text-[rgb(85,85,85)] thai-text">
+                            {achievement.description}
+                          </p>
+                          <div className="flex items-center mt-2">
+                            <Badge className="bg-green-100 text-green-700 border-0 text-xs">
+                              +{achievement.points} คะแนน
+                            </Badge>
+                            <span className="text-xs text-[rgb(119,119,119)] ml-2 thai-text">
+                              {achievement.date}
+                            </span>
+                          </div>
+                        </div>
+                        <CheckCircle className="w-6 h-6 text-green-500" />
+                      </CardContent>
+                    </Card>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Upcoming Missions */}
+            <div>
+              <div className="flex items-center justify-between mb-6">
+                <h3 className="text-xl font-semibold text-[rgb(51,51,51)] thai-text flex items-center">
+                  <Target className="w-6 h-6 mr-3 text-[rgb(254,80,0)]" />
+                  ภารกิจที่กำลังมา
+                </h3>
+                <Link to="/missions">
+                  <Button variant="outline" size="sm" className="thai-text border-[rgb(254,80,0)] text-[rgb(254,80,0)] hover:bg-[rgb(254,80,0)] hover:text-white">
+                    ดูทั้งหมด
+                  </Button>
+                </Link>
+              </div>
+              <div className="space-y-4">
+                {upcomingMissions.map((mission, index) => (
+                  <Card key={index} className="border border-[rgb(238,238,238)] shadow-sm">
+                    <CardContent className="p-4">
+                      <div className="flex items-center justify-between mb-3">
+                        <div>
+                          <h4 className="font-semibold text-[rgb(51,51,51)] thai-text">
+                            {mission.title}
+                          </h4>
+                          <p className="text-sm text-[rgb(85,85,85)] thai-text">
+                            {mission.description}
+                          </p>
+                        </div>
+                        <Badge className="bg-orange-100 text-orange-700 border-0 text-xs thai-text">
+                          +{mission.points} คะแนน
+                        </Badge>
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <Progress
+                          value={mission.progress}
+                          className="flex-1 h-2 mr-3"
+                        />
+                        <span className="text-xs text-[rgb(119,119,119)] thai-text">
+                          {mission.deadline}
+                        </span>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
           <CardHeader>
             <div className="flex items-center justify-between">
               <div>
@@ -636,9 +753,8 @@ const Dashboard = () => {
               </Card>
             ))}
           </div>
-        </div>
       </div>
-    </div>
+    </Layout>
   );
 };
 
